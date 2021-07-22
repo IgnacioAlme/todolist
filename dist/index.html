@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lnag="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0" />
+    <title>To do List</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=
+                Montserrat:wght@400;700&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <script src="main.js"></script>
+</head>
+
+<body>
+
+    <!--Popup Form for adding new notes-->
+    <div class="form-popup" id="myForm">
+        <form action="#" class="form-container">
+            <h1>New ToDo</h1>
+
+            <label for="title"><b>Title</b></label>
+            <input type="text" placeholder="Enter Title" name="title" required>
+
+            <label for="description"><b>Description</b></label>
+            <input type="text" placeholder="Enter Description" name="description" required>
+
+            <label for="date"><b>Due Date</b></label>
+            <input type="date" name="date" required><br>
+
+            <label for="priority"><b>Priority</b></label><br>
+            <input type="radio" id="high" name="priority" value="high">
+            <label for="high">High</label><br>
+            <input type="radio" id="low" name="priority" value="low">
+            <label for="low">Low</label><br>
+
+            <button type="button" class="btn add">Add</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+    <button type="button" class="open-button" onclick="openForm()">Add Item</button>
+
+    <script>
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+    </script>
+</body>
+
+
+</html>
